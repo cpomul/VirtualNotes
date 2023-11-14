@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>VirtualNote</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!--some logo here-->
+        <ul>
+          <li class="link1">link 1</li>
+          <li class="link2">link 2</li>
+          <li class="link3">link 3</li>
+        </ul>
+      </nav>
+      <button type="submit" id="showDialogButton">placeholder</button>
+    </header>
+    <main>
+      <dialog id="dialog">
+        <form id="infoForm">
+          <label for="title">Title:</label>
+          <input type="text" id="title" required /><br />
+          <label for="about">About:</label>
+          <input type="text" id="about" required /><br />
+          <input type="submit" value="Add" id="submitFormButton" />
+        </form>
+        <button type="submit" id="closeDialog">X</button>
+      </dialog>
+      <div class="container1"></div>
+      <div class="container2"></div>
+      <div class="container3"></div>
+    </main>
+    <footer></footer>
+    <script type="module" src="./ArrayAppender.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
