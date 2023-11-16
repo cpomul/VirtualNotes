@@ -1,16 +1,17 @@
 import { ArrayAppender } from "./ArrayAppender.js";
-
+import { Renderer } from "./Renderer.js";
 const showDialogButton = document.querySelector("#showDialogButton");
 const submitFormButton = document.querySelector("#submitFormButton");
 const dialog = document.querySelector("#dialog");
 const closeDialog = document.querySelector("#closeDialog");
-
-const array1 = [];
-
-const arrayAppender = new ArrayAppender(array1);
-submitFormButton.addEventListener("click", () => {
+let array1 = [];
+let arrayappender = new ArrayAppender(array1);
+let renderer = new Renderer(array1, "#container1");
+submitFormButton.addEventListener("click", (event) => {
   event.preventDefault();
-  arrayAppender.addInfoToArray();
+  arrayappender.addInfoToArray();
+  console.log(array1);
+  renderer.render();
 });
 
 // Button functionality

@@ -12,6 +12,5 @@ export class ArrayAppender {
     };
 
     this.specificArray.push(infoObject);
-    console.log(this.specificArray);
   }
 }
