@@ -15,23 +15,13 @@
           <li class="link2">link 2</li>
           <li class="link3">link 3</li>
         </ul>
+        <button type="submit" id="showDialogButton">placeholder</button>
       </nav>
-      <button type="submit" id="showDialogButton">placeholder</button>
     </header>
-    <main>
-      <dialog id="dialog">
-        <form id="infoForm">
-          <label for="title">Title:</label>
-          <input type="text" id="title" required /><br />
-          <label for="about">About:</label>
-          <input type="text" id="about" required /><br />
-          <input type="submit" value="Add" id="submitFormButton" />
-        </form>
-        <button type="submit" id="closeDialog">X</button>
-      </dialog>
-      <div id="container1"></div>
-      <div id="container2"></div>
-      <div id="container3"></div>
+    <main id="main-container">
+      <div id="container1" class="cardContainer"></div>
+      <div id="container2" class="cardContainer"></div>
+      <div id="container3" class="cardContainer"></div>
     </main>
     <footer></footer>
     <script type="module" src="index.js"></script>

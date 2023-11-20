@@ -9,6 +9,7 @@ export class Renderer {
     renderContainer.innerHTML = "";
     this.dataArray.forEach((item) => {
       const element = document.createElement("div");
+      element.classList = "cardContent";
       element.textContent = `Title: ${item.title}\nAbout: ${item.about}`;
 
       renderContainer.appendChild(element);

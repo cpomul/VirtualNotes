@@ -1,27 +1,26 @@
 import { ArrayAppender } from "./ArrayAppender.js";
 import { Renderer } from "./Renderer.js";
+import { DialogCreator } from "./Dialog.js";
 const showDialogButton = document.querySelector("#showDialogButton");
-const submitFormButton = document.querySelector("#submitFormButton");
-const dialog = document.querySelector("#dialog");
-const closeDialog = document.querySelector("#closeDialog");
 let array1 = [];
 let arrayappender = new ArrayAppender(array1);
-let renderer = new Renderer(array1, "#container1");
-submitFormButton.addEventListener("click", (event) => {
+
+// Create an instance of DialogCreator
+var dialogCreator = new DialogCreator();
+
+// Call createAndAppend method to create and append the dialog
+dialogCreator.createAndAppend("main-container");
+
+// Get the submit button using the instance method getSubmitButton
+const submitButton = dialogCreator.getSubmitButton();
+
+// Add an event listener to the submit button
+submitButton.addEventListener("click", (event) => {
   event.preventDefault();
   arrayappender.addInfoToArray();
   console.log(array1);
-  renderer.render();
 });
 
-// Button functionality
-function openDialog() {
+showDialogButton.addEventListener("click", () => {
   dialog.showModal();
-}
-
-function closeDialogBox() {
-  dialog.close();
-}
-showDialogButton.addEventListener("click", openDialog);
-submitFormButton.addEventListener("click", closeDialogBox);
-closeDialog.addEventListener("click", closeDialogBox);
+});
