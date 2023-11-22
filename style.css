@@ -104,3 +104,6 @@ input {
   flex-direction: row;
   justify-content: center;
 }
+#closeButton {
+  width: 50px;
+}

@@ -1,6 +1,7 @@
 export class DialogCreator {
   constructor() {
     this.submitButton = null;
+    this.closeButton = null;
   }
 
   createAndAppend(parentId) {
@@ -36,6 +37,10 @@ export class DialogCreator {
     inputAbout.setAttribute("type", "text");
     inputAbout.setAttribute("id", "about");
 
+    this.closeButton = document.createElement("input");
+    this.closeButton.setAttribute("type", "submit");
+    this.closeButton.setAttribute("id", "closeButton");
+
     this.submitButton = document.createElement("input");
     this.submitButton.setAttribute("type", "submit");
     this.submitButton.setAttribute("value", "Add");
@@ -46,7 +51,8 @@ export class DialogCreator {
       inputTitle,
       labelAbout,
       inputAbout,
-      this.submitButton
+      this.submitButton,
+      this.closeButton
     );
     dialogTag.appendChild(form);
     return dialogTag;
@@ -54,5 +60,8 @@ export class DialogCreator {
 
   getSubmitButton() {
     return this.submitButton;
+  }
+  getCloseButton() {
+    return this.closeButton;
   }
 }
