@@ -12,7 +12,7 @@ dialogCreator.createAndAppend("main-container");
 const submitButton = dialogCreator.getSubmitButton();
 const closeButton = dialogCreator.getCloseButton();
 
-submitButton.addEventListener("click", (event) => {
+submitButton.addEventListener("submit", (event) => {
   event.preventDefault();
   arrayappender.addInfoToArray();
   renderer.render();

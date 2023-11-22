@@ -12,16 +12,6 @@ header > nav {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
 }
-nav > ul {
-  display: flex;
-  justify-content: center;
-  gap: 100px;
-  padding-top: 15px;
-}
-ul > li {
-  list-style: none;
-  color: #1f1717;
-}
 
 #dialog {
   width: 300px; /* Set the width of the dialog */

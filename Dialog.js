@@ -28,6 +28,7 @@ export class DialogCreator {
     const inputTitle = document.createElement("input");
     inputTitle.setAttribute("type", "text");
     inputTitle.setAttribute("id", "title");
+    inputTitle.setAttribute("required", "");
 
     const labelAbout = document.createElement("label");
     labelAbout.textContent = "About:";
@@ -36,6 +37,7 @@ export class DialogCreator {
     const inputAbout = document.createElement("input");
     inputAbout.setAttribute("type", "text");
     inputAbout.setAttribute("id", "about");
+    inputAbout.setAttribute("required", "");
 
     this.closeButton = document.createElement("input");
     this.closeButton.setAttribute("type", "submit");
