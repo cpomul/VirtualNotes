@@ -1,6 +1,6 @@
 export class DialogCreator {
   constructor() {
-    this.submitButton = null;
+    this.infoForm = null;
     this.closeButton = null;
   }
 
@@ -18,8 +18,8 @@ export class DialogCreator {
     const dialogTag = document.createElement("dialog");
     dialogTag.setAttribute("id", "dialog");
 
-    const form = document.createElement("form");
-    form.setAttribute("id", "infoForm");
+    this.infoForm = document.createElement("form");
+    this.infoForm.setAttribute("id", "infoForm");
 
     const labelTitle = document.createElement("label");
     labelTitle.textContent = "Title:";
@@ -48,7 +48,7 @@ export class DialogCreator {
     this.submitButton.setAttribute("value", "Add");
     this.submitButton.setAttribute("id", "submitFormButton");
 
-    form.append(
+    this.infoForm.append(
       labelTitle,
       inputTitle,
       labelAbout,
@@ -56,12 +56,12 @@ export class DialogCreator {
       this.submitButton,
       this.closeButton
     );
-    dialogTag.appendChild(form);
+    dialogTag.appendChild(this.infoForm);
     return dialogTag;
   }
 
-  getSubmitButton() {
-    return this.submitButton;
+  getForm() {
+    return this.infoForm;
   }
   getCloseButton() {
     return this.closeButton;

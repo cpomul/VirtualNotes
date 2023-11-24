@@ -9,12 +9,13 @@ let renderer = new Renderer(array1, "#container1");
 
 let dialogCreator = new DialogCreator();
 dialogCreator.createAndAppend("main-container");
-const submitButton = dialogCreator.getSubmitButton();
+const form = dialogCreator.getForm();
 const closeButton = dialogCreator.getCloseButton();
 
-submitButton.addEventListener("submit", (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   arrayappender.addInfoToArray();
+  console.log(array1);
   renderer.render();
   dialog.close();
 });
