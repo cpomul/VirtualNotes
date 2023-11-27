@@ -41,19 +41,20 @@ export class DialogCreator {
 
     this.closeButton = document.createElement("input");
     this.closeButton.setAttribute("type", "submit");
+    this.closeButton.setAttribute("value", "Close");
     this.closeButton.setAttribute("id", "closeButton");
 
-    this.submitButton = document.createElement("input");
-    this.submitButton.setAttribute("type", "submit");
-    this.submitButton.setAttribute("value", "Add");
-    this.submitButton.setAttribute("id", "submitFormButton");
+    const submitButton = document.createElement("input");
+    submitButton.setAttribute("type", "submit");
+    submitButton.setAttribute("value", "Add");
+    submitButton.setAttribute("id", "submitFormButton");
 
     this.infoForm.append(
       labelTitle,
       inputTitle,
       labelAbout,
       inputAbout,
-      this.submitButton,
+      submitButton,
       this.closeButton
     );
     dialogTag.appendChild(this.infoForm);
