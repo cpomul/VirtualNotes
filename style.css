@@ -11,43 +11,68 @@
   font-family: jetbrainsMono;
 }
 body {
-  background-color: #a9b4c2;
+  background-color: #c0c5c1;
 }
 header > nav {
   height: 60px;
-  background-color: #397367;
+  background-color: #574b60;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.btn {
-  font-family: Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+.btn-39,
+.btn-39 *,
+.btn-39 :after,
+.btn-39 :before,
+.btn-39:after,
+.btn-39:before {
+  border: 0 solid;
+  box-sizing: border-box;
 }
-.btn:hover .btn-slide-show-text1 {
-  margin-left: 65px;
+.btn-39 {
+  background-color: #3f334d;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
-.btn-shadow-drop {
+.btn-39:disabled {
+  cursor: default;
+}
+.btn-39:-moz-focusring {
+  outline: auto;
+}
+.btn-39 [hidden] {
+  display: none;
+}
+.btn-39 {
+  border: 1px solid;
+  box-sizing: border-box;
+  border-color: #3f334d;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 1rem 1.5rem;
   position: relative;
-  background: rgb(249, 250, 250);
-  padding: 20px;
-  font-size: 0.9em;
-  font-weight: 700;
-
   text-transform: uppercase;
-  transition: all 0.3s ease-in-out 0s;
-  left: 0px;
-  top: 0px;
-  width: 90px;
-  height: 20px;
 }
-.btn-shadow-drop:hover {
-  left: 4px;
-  top: 4px;
-  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px;
+.btn-39 .new {
+  background: #eaf0ce;
+  color: #000;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-100%);
+  transition: transform 0.2s;
 }
-.btn-shadow-drop--purple {
-  border: 1px solid rgb(61, 52, 139);
-  color: rgb(61, 52, 139);
-  box-shadow: rgb(61, 52, 139) 4px 4px 0px 0px;
+.btn-39:hover .new {
+  transform: translateX(0);
 }
 
 /* Style for the dialog */
@@ -55,7 +80,7 @@ header > nav {
   border: 2px solid #f4c95d;
   border-radius: 0;
   padding: 20px;
-  background-color: #2f0a28;
+  background-color: #7d8491;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin: auto;
 }
@@ -79,8 +104,8 @@ label {
   margin-bottom: 12px;
   border: 2px solid #f4c95d;
   border-radius: 0;
-  background-color: #2f0a28;
-  color: #f4c95d;
+  background-color: #c0c5c1;
+  color: black;
 }
 
 #submitFormButton {
@@ -88,17 +113,45 @@ label {
 }
 
 #submitFormButton:hover {
-  background-color: #f4c95d;
+  background-color: #eaf0ce;
   color: #2f0a28;
 }
 
 /* Close button style */
 #closeButton {
-  background-color: #f4c95d;
-  color: #2f0a28;
+  background-color: #c0c5c1;
 }
 
 #closeButton:hover {
-  background-color: #2f0a28;
-  color: #f4c95d;
+  background-color: grey;
+}
+
+.cardContent {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+
+  /* Flexbox styling */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  /* Responsive design */
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  /* Adjusted width */
+  max-width: 300px; /* Adjust the value as needed */
+  width: 100%;
+}
+
+/* Optional: Add hover effect */
+.cardContent:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
